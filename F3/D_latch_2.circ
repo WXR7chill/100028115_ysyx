@@ -56,57 +56,92 @@
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(100,100)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="D"/>
-    </comp>
-    <comp lib="0" loc="(100,280)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="WE"/>
-    </comp>
-    <comp lib="0" loc="(770,140)" name="Pin">
+    <comp lib="0" loc="(810,200)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="Q"/>
       <a name="type" val="output"/>
     </comp>
-    <comp lib="0" loc="(770,280)" name="Pin">
+    <comp lib="0" loc="(810,220)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="Q_bar"/>
       <a name="type" val="output"/>
     </comp>
-    <comp lib="1" loc="(260,120)" name="NAND Gate">
-      <a name="label" val="S_bar"/>
+    <comp lib="0" loc="(90,140)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="D"/>
     </comp>
-    <comp lib="1" loc="(260,260)" name="NAND Gate">
+    <comp lib="0" loc="(90,220)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="WE"/>
+    </comp>
+    <comp lib="1" loc="(480,160)" name="NAND Gate">
       <a name="label" val="R_bar"/>
     </comp>
-    <comp lib="1" loc="(610,140)" name="NAND Gate"/>
-    <comp lib="1" loc="(610,280)" name="NAND Gate"/>
-    <wire from="(100,100)" to="(200,100)"/>
-    <wire from="(100,280)" to="(110,280)"/>
-    <wire from="(110,140)" to="(110,280)"/>
-    <wire from="(110,140)" to="(200,140)"/>
-    <wire from="(110,280)" to="(200,280)"/>
-    <wire from="(160,180)" to="(160,240)"/>
-    <wire from="(160,180)" to="(290,180)"/>
-    <wire from="(160,240)" to="(200,240)"/>
-    <wire from="(260,120)" to="(290,120)"/>
-    <wire from="(260,260)" to="(550,260)"/>
-    <wire from="(290,120)" to="(290,180)"/>
-    <wire from="(290,120)" to="(550,120)"/>
-    <wire from="(420,190)" to="(420,300)"/>
-    <wire from="(420,190)" to="(650,190)"/>
-    <wire from="(420,300)" to="(550,300)"/>
-    <wire from="(500,160)" to="(500,230)"/>
-    <wire from="(500,160)" to="(550,160)"/>
-    <wire from="(500,230)" to="(690,230)"/>
-    <wire from="(610,140)" to="(650,140)"/>
-    <wire from="(610,280)" to="(690,280)"/>
-    <wire from="(650,140)" to="(650,190)"/>
-    <wire from="(650,140)" to="(770,140)"/>
-    <wire from="(690,230)" to="(690,280)"/>
-    <wire from="(690,280)" to="(770,280)"/>
+    <comp lib="1" loc="(480,270)" name="NAND Gate">
+      <a name="label" val="S_bar"/>
+    </comp>
+    <comp loc="(750,200)" name="SR_latch_NAND"/>
+    <wire from="(300,250)" to="(420,250)"/>
+    <wire from="(300,90)" to="(300,250)"/>
+    <wire from="(300,90)" to="(510,90)"/>
+    <wire from="(400,180)" to="(400,220)"/>
+    <wire from="(400,180)" to="(420,180)"/>
+    <wire from="(400,220)" to="(400,290)"/>
+    <wire from="(400,290)" to="(420,290)"/>
+    <wire from="(480,160)" to="(510,160)"/>
+    <wire from="(480,270)" to="(510,270)"/>
+    <wire from="(510,160)" to="(510,200)"/>
+    <wire from="(510,200)" to="(530,200)"/>
+    <wire from="(510,220)" to="(510,270)"/>
+    <wire from="(510,220)" to="(530,220)"/>
+    <wire from="(510,90)" to="(510,160)"/>
+    <wire from="(750,200)" to="(810,200)"/>
+    <wire from="(750,220)" to="(810,220)"/>
+    <wire from="(90,140)" to="(420,140)"/>
+    <wire from="(90,220)" to="(400,220)"/>
+  </circuit>
+  <circuit name="SR_latch_NAND">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="SR_latch_NAND"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(110,130)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="R_bar"/>
+    </comp>
+    <comp lib="0" loc="(110,280)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="S_bar"/>
+    </comp>
+    <comp lib="0" loc="(470,150)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Q"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(470,260)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Q_bar"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="1" loc="(250,150)" name="NAND Gate"/>
+    <comp lib="1" loc="(250,260)" name="NAND Gate"/>
+    <wire from="(110,130)" to="(190,130)"/>
+    <wire from="(110,280)" to="(190,280)"/>
+    <wire from="(130,210)" to="(130,240)"/>
+    <wire from="(130,210)" to="(290,210)"/>
+    <wire from="(130,240)" to="(190,240)"/>
+    <wire from="(170,170)" to="(170,190)"/>
+    <wire from="(170,170)" to="(190,170)"/>
+    <wire from="(170,190)" to="(370,190)"/>
+    <wire from="(250,150)" to="(290,150)"/>
+    <wire from="(250,260)" to="(370,260)"/>
+    <wire from="(290,150)" to="(290,210)"/>
+    <wire from="(290,150)" to="(470,150)"/>
+    <wire from="(370,190)" to="(370,260)"/>
+    <wire from="(370,260)" to="(470,260)"/>
   </circuit>
 </project>
